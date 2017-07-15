@@ -7,6 +7,9 @@
       "email": "h@hanc.cc"
     }
   ],
+  "require": {
+        "predis/predis": "^1.1"
+  },
   "require-dev": {
     "hanson/vbot": "^2.0.4"
   },
