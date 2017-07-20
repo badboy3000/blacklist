@@ -13,7 +13,7 @@ class Blacklist extends AbstractMessageHandler
 {
     public $author = 'HanSon';
 
-    public $version = '1.0';
+    public $version = '1.0.1';
 
     public $name = 'blacklist';
 
@@ -45,12 +45,11 @@ class Blacklist extends AbstractMessageHandler
         $this->cache->set($key,$count);
         $this->cache->expire($key, 10);
 
-        if ($count == 4) {
+        if ($count == 5) {
             $this->warn($message);
-            return true;
         }
 
-        if ($count >= 7) {
+        if ($count >= 8) {
             $this->block($message);
             return true;
         }
